@@ -48,13 +48,43 @@ These queries allowed for efficient filtering, grouping, and aggregation of data
 
 ## 📊 Visualizations (Tableau)
 
-The following charts were created in Tableau to support the analysis:
+The Tableau component of this project is structured into **three fully themed dashboards**, each answering a specific analytical question:
 
-- **Line Chart**: Total box office revenue per year
-- **Bar Chart**: Count and percentage of low-grossing movies (< $10M) per year
-- **Horizontal Bar Chart**: Average profit by genre
-- **Bubble Chart**: Relationship between average budget and revenue per genre
-- **Pie Chart**: Genre distribution across all movies
+---
+
+### 1. **Trends in Movie Production and Revenue (2012–2016)**
+
+- 📈 Dual-axis line & bar chart: Average revenue per movie + total movie count
+- 📊 Bar chart: Total box office revenue per year (with color-coded growth %)
+- 📋 Table: Number and % of low-revenue movies (< $10M) by year
+- 🎯 Highlighted insights (e.g., peak in 2015, major drop in 2014–2015)
+
+---
+
+### 2. **Profitability and Risk Across Movie Genres**
+
+- 📊 Horizontal bar chart: Average profit per genre with reference line
+- 📈 Scatter plot: Relationship between average budget and revenue by genre
+- 🥧 Pie chart: Genre distribution of low-performing films (< $10M)
+- 🎨 Genre-consistent color palette across all visuals
+
+---
+
+### 3. **Release Timing & Star Power in High-Budget Films**
+
+- 📈 Dual-axis chart: Monthly average revenue and number of films released
+- 📊 Bar chart: Actor appearances in $100M+ budget movies
+- 🔍 Annotated insights (e.g., Tom Cruise = $348M avg revenue)
+- 📅 Calendar-style color scale for profitable release months
+
+---
+
+Each dashboard is fully formatted with:
+- ✅ Clear titles and subtitles
+- ✅ Consistent color usage
+- ✅ Insight-focused annotations
+- ✅ Export-ready layout for reporting or presentations
+
 
 ## 📝 Changelog
 
@@ -69,27 +99,37 @@ All data transformation steps are documented in [`changelog.ipynb`](./changelog.
 
 ## 📁 Project Structure
 
+```
 Movie-Data-Analysis-Project/
 ├── dataset/
-│ ├── movie_initial_dataset.csv
-│ ├── movie_initial_dataset.xlsx
-│ └── movie_ready_dataset.xlsx
+│   ├── movie_initial_dataset.csv
+│   ├── movie_initial_dataset.xlsx
+│   └── movie_tableu_dataset.xlsx
 │
 ├── queries/
-│ ├── 1_director_movie_count.sql
-│ ├── 2_high_budget_actors.sql
-│ ├── 3_low_revenue_genres.sql
-│ ├── 4_actor_revenue_avg.sql
-│ └── 5_revenue_by_month.sql
-│ └── 5_1_revenue_by_month_and_genre.sql
+│   ├── 1_director_movie_count.sql
+│   ├── 2_high_budget_actors.sql
+│   ├── 3_low_revenue_genres.sql
+│   ├── 4_actor_revenue_avg.sql
+│   ├── 5_revenue_by_month.sql
+│   └── 5_1_revenue_by_month_and_genre.sql
 │
 ├── query_results/
-│ ├── 1_director_movie_count.csv
-│ ├── 2_high_budget_actors.csv
-│ └── ...
+│   ├── 1_director_movie_count.csv
+│   ├── 2_high_budget_actors.csv
+│   ├── 3_low_revenue_genres.csv
+│   └── ...
 │
 ├── tableau/
-│ └── screenshots/ (Tableau dashboards or exported visuals)
+│   ├── movie_dashboards.twb
+│   ├── movie_dashboards.twbx
+│   ├── movie_tableu_dataset.xlsx
+│   └── dashboard_images/
+│       ├── dashboard_1_trends_by_years.png
+│       ├── dashboard_2_genres_profitability.png
+│       └── dashboard_3_release-timing_actors.png
 │
 ├── changelog.ipynb
-├── README.md
+└── README.md
+```
+
